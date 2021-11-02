@@ -19,10 +19,27 @@ public static void main(String[] args) {
 	rob5.setSpeed(10);
 	
 	
-	Thread r1 = new Thread(()->rob1.);
+	Thread r1 = new Thread(()->drawCircle(rob1));
+	Thread r2 = new Thread(()->drawCircle(rob2));
+	Thread r3 = new Thread(()->drawCircle(rob3));
+	Thread r4 = new Thread(()->drawCircle(rob4));
+	Thread r5 = new Thread(()->drawCircle(rob5));
 	
+	r1.start();
+	r2.start();
+	r3.start();
+	r4.start();
+	r5.start();
 	
-	//You stopped here. Must make code to draw into circle then put that code into thread.
 }
+public static void drawCircle(Robot r){
+	r.penDown();
+	r.turn(-90);
+	for(int i = 0; i<25; i++){
+		r.move(45);
+		r.turn(15);
+	}
+}
+
 }
 

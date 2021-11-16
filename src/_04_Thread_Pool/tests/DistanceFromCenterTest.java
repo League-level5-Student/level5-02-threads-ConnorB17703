@@ -1,11 +1,13 @@
 package _04_Thread_Pool.tests;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 import javax.swing.JOptionPane;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class DistanceFromCenterTest {
+import _04_Thread_Pool.WorkQueue;
+
+public class DistanceFromCenterTest {
 
 	public static double distance(double x1, double y1, double x2, double y2) {
 		double dx = x2 - x1;
@@ -22,7 +24,7 @@ class DistanceFromCenterTest {
 	}
 	
 	@Test
-	void checkSpeedTest() {
+	public void checkSpeedTest() {
 		System.out.println("Distance From Center Test");
 		
 		int width = 8192;

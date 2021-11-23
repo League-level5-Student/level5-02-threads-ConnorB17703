@@ -9,13 +9,20 @@ package _05_Synchronized_Swimming;
  */
 public class Swimmer extends Thread {
 	public final String name;
-
+	SynchronizedSwimming SS = new SynchronizedSwimming();
+	
+		
 	public Swimmer(String name) {
 		this.name = name;
 	}
 
+	//FIGURE OUT WHAT TO PUT IN THE PARENTHESISES IN THE SWIMLAP AND TAKETURN METHOD
+	
 	@Override
 	public void run() {
-		// ...
+		for(int i =0; i<5; i++){
+			 SS.swimLap();
+			 SS.takeTurn();
+		}
 	}
 }
